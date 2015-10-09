@@ -1,4 +1,8 @@
 require 'authors_helper'
+require 'wget_wrapper'
+require 'js_minifier'
+require 'css_minifier'
+require 'html_minifier'
 
 Awestruct::Extensions::Pipeline.new do
   helper Awestruct::Extensions::Partial
@@ -10,4 +14,9 @@ Awestruct::Extensions::Pipeline.new do
   extension Awestruct::Extensions::Indexifier.new
   #extension Awestruct::Extensions::Atomizer.new :posts, '/feed.atom', :template => '_layouts/feed.atom.haml'
   extension Awestruct::Extensions::Disqus.new
+ 
+  extension Awestruct::Extensions::WgetWrapper.new
+  transformer Awestruct::Extensions::JsMinifier.new
+  transformer Awestruct::Extensions::CssMinifier.new
+  transformer Awestruct::Extensions::HtmlMinifier.new
 end

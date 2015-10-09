@@ -4,7 +4,6 @@
 :page-layout: base
 :toc:
 :toc-title!:
-:toclevels: 4
 :toc-placement!:
 :numbered:
 include::links.adoc[]

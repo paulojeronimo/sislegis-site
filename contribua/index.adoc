@@ -4,16 +4,19 @@ include::links.adoc[]
 
 == Seja um desenvolvedor do SISLEGIS!
 
-O {uri-sislegis}[SISLEGIS] é software livre. Qualquer um pode participar contribuindo de alguma forma! =) Para isso, basta ter uma conta no {uri-github}[GitHub], fazer um https://help.github.com/articles/fork-a-repo/[fork] de um dos projetos, verificar as https://guides.github.com/features/issues/[issues] que temos abertas para eles, codificar e submeter um https://help.github.com/articles/using-pull-requests/[pull request].
+O {uri-sislegis}[SISLEGIS] é um software livre. Qualquer um pode participar contribuindo de alguma forma! =) Para isso, basta ter uma conta no {uri-github}[GitHub], fazer um https://help.github.com/articles/fork-a-repo/[fork] de um dos projetos, verificar as https://guides.github.com/features/issues/[issues] que temos abertas para eles, codificar e submeter um https://help.github.com/articles/using-pull-requests/[pull request].
 
 O SISLEGIS está dividido, neste momento, nos seguintes projetos:
 
-. {uri-sislegis-site}[sislegis-site] (este site). Para atuar nesse projeto, primeiro leia a página link:neste-site/["Como contribuir na construção deste site"].
-.. {uri-sislegis-site-issues}[Issues abertas]
+. {uri-sislegis-site}[sislegis-site] (este site). Para atuar nesse projeto, primeiro leia a página link:neste-site/["Contribuindo na construção deste site"].
 . {uri-sislegis-prototipo}[sislegis-prototipo]. Protótipo de telas da aplicação, desenvolvido pelo arquiteto da informação da equipe.
 . {uri-sislegis-dotfiles}[sislegis-dotfiles]. Conjunto de arquivos de configuração (e scripts) utilizados em ambientes do projeto (desenvolvimento, homologação, integração, produção).
-. {uri-sislegis-ambiente}[sislegis-ambiente]. Conjunto de scripts utilizados, especificamente, para a montagem de ambientes do projeto.
-. {uri-sislegis-ambiente-fedora}[sislegis-ambiente-fedora]. Contjunto de scripts utilizados, especificamente, para a montagem de ambientes no Fedora.
-. {uri-sislegis-app}[sislegis-app] (a aplicação executada na infraestrutura do MJ). Para atuar nesse projeto, primeiro leia a página link:../arquitetura/["Arquitetura da aplicação"].
+. {uri-sislegis-ambiente}[sislegis-ambiente]. Conjunto de scripts comuns utilizados na montagem de todos os ambientes do projeto.
+. {uri-sislegis-ambiente-fedora}[sislegis-ambiente-fedora]. Conjunto de scripts construídos especificamente para a montagem de um ambiente de desenvolvimento no {uri-fedora}[Fedora].
+. {uri-sislegis-ambiente-ubuntu}[sislegis-ambiente-ubuntu]. Conjunto de scripts construídos especificamente para a montagem de um ambiente de desenvolvimento no {uri-ubuntu}[Ubuntu].
+. {uri-sislegis-ambiente-centos}[sislegis-ambiente-centos]. Conjunto de scripts construídos para a montagem do ambiente de homologação no {uri-centos}[CentOS].
+. {uri-sislegis-ambiente-producao}[sislegis-ambiente-producao]. Conjunto de scripts construídos para a montagem do ambiente de produção.
+. {uri-sislegis-app}[sislegis-app] (o backend da aplicação executada na infraestrutura do MJ). Para atuar nesse projeto, primeiro leia a página link:../arquitetura/["Arquitetura da aplicação"].
+. {uri-sislegis-app-frontend}[sislegis-app-frontend] (o frontend da aplicação executada na infraestrutura do MJ). Para atuar nesse projeto, primeiro leia a página link:../arquitetura/["Arquitetura da aplicação"].
 
 // vim: set syntax=asciidoc:

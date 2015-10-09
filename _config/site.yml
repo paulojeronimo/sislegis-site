@@ -1,25 +1,67 @@
 title: SISLEGIS
 base_url: ''
+
+jquery_url: http://ajax.googleapis.com/ajax/libs/jquery/1.11.1
+bootstrap_url: http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5
+
 disqus: asciidoctor
 disqus_generate_id: true
 disqus_developer: true
+
+css_minifier: disabled
+js_minifier: disabled
+html_minifier: disabled
+
+# Configurações do Asciidoctor
 asciidoctor:
-  :numbered:
   :safe: safe
+  :numbered:
   :attributes:
     base_url: ''
     ctx_path: ''
     idprefix: ''
     idseparator: '-'
     sectanchors: ''
+    toclevels: 4
+    source-highlighter: coderay
+    coderay-css: style
     icons: font
+
+# wget: cache hosted fonts, images and javascript
+wget:
+  enabled: true
+  rerunEach: 86400 # seconds
+  timestampFilename: _wget-timestamp
+  options:
+    - --no-remove-listing
+    - -q
+    - -r
+    - --no-parent
+    - -N
+    - --reject 'index.html*'
+    - -e robots=off
+    - --directory-prefix=cache
+  urls:
+    - http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js
+    - http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+    - http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css
+    - http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+
 profiles:
   development:
     deploy: nil
+    minified: .min
+    css_minifier: enabled
+    js_minifier: enabled
+    html_minifier: enabled
   production:
     base_url: http://pensandoodireito.github.io/sislegis-site
     ctx_path: /sislegis-site
     disqus_developer: false
+    minified: .min
+    css_minifier: enabled
+    js_minifier: enabled
+    html_minifier: enabled
     asciidoctor:
       :attributes:
         base_url: http://pensandoodireito.github.io/sislegis-site

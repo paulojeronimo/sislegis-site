@@ -1,0 +1,38 @@
+= Utilizando o Fedora para construir este site
+:page-layout: base
+:toc:
+:toc-title!:
+:toc-placement!:
+:numbered:
+include::links.adoc[]
+
+toc::[]
+
+== Utilizando o Fedora 22
+
+=== Instalando o Ruby via rvm
+
+[source,bash]
+----
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.1
+source ~/.profile
+----
+
+=== Gerando o site localmente
+
+[source,bash]
+----
+sudo dnf -y install libxml2-devel libxslt-devel
+git clone https://github.com/<SEU_USUARIO>/sislegis-site
+cd sislegis-site
+rvm use 2.2.1@sislegis-site --create --ruby-version
+gem install bundle
+bundle install
+rake
+----
+
+=== Acessando o site gerado
+Acesse o site gerado em http://localhost:4242.
+
+// vim: set syntax=asciidoc:

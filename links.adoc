@@ -49,12 +49,18 @@
 :uri-nexus: http://www.sonatype.org/nexus/
 
 // URIs do projeto
-:uri-edital-arquiteto: http://www.pnud.org.br/recrutamento/20140725_0958.pdf
+:uri-edital-201513: http://pensando.mj.gov.br/wp-content/uploads/2015/08/Edital-PSS-13-TOR_TI_Projeto_de_Software_Sislegis-ago_2015.pdf
+:uri-edital-201512: http://pensando.mj.gov.br/wp-content/uploads/2015/08/Edital-PSS-12-TOR_TI_Componentes_de_Software_Sislegis-ago_2015.pdf
+:uri-edital-201505: http://pensando.mj.gov.br/wp-content/uploads/2015/07/Edital-5-TOR_TI_Interface_Web-jun_2015_final.pdf
+:uri-edital-201411: http://www.pnud.org.br/recrutamento/20140725_0958.pdf
 :uri-sislegis: {uri-github}/pensandoodireito
 :uri-sislegis-app: {uri-sislegis}/sislegis-app
+:uri-sislegis-app-frontend: {uri-sislegis}/sislegis-app-frontend
 :uri-sislegis-ambiente: {uri-sislegis}/sislegis-ambiente
 :uri-sislegis-ambiente-fedora: {uri-sislegis}/sislegis-ambiente-fedora
 :uri-sislegis-ambiente-ubuntu: {uri-sislegis}/sislegis-ambiente-ubuntu
+:uri-sislegis-ambiente-centos: {uri-sislegis}/sislegis-ambiente-centos
+:uri-sislegis-ambiente-producao: {uri-sislegis}/sislegis-ambiente-producao
 :uri-sislegis-anterior-github: http://github.com/mobiwave/sislegis
 :uri-sislegis-dotfiles: {uri-sislegis}/sislegis-dotfiles
 :uri-sislegis-prototipo: {uri-sislegis}/sislegis-prototipo
@@ -69,8 +75,10 @@
 :uri-guilherme: {uri-github}/guilhermehott
 :uri-marco: {uri-github}/marcoamarelo
 :uri-paulo: {uri-github}/paulojeronimo
-:uri-raphael: {uri-github}/thsl
+:uri-raphael: {uri-github}/raphaelbsb1
 :uri-thiago: {uri-github}/thsl
-:uri-eduardo: {uri-github}/eduardo
+:uri-rafael: {uri-github}/rafaelcoutinho
+:uri-gustavo: {uri-github}/gcdelgado
+:uri-theoziran: {uri-github}/theoziran
 
 // vim: set syntax=asciidoc:

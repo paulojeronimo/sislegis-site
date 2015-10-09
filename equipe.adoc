@@ -2,53 +2,30 @@
 :page-layout: base
 include::links.adoc[]
 
-== Equipe de desenvolvimento
+== link:../contribua/[Faça parte!]
 
-|===
-| Nome | Papéis
+== Fase 2 (de Set/2015 a hoje)
+* Servidores do MJ:
+** {uri-marco}[Marco Amarelo]: Coordenação
+* Consultores contratados pelo PNUD (conforme os links http://pensando.mj.gov.br/2015/07/29/divulgacao-do-resultado-dos-editais-no-5/[1] e http://pensando.mj.gov.br/2015/09/02/divulgacao-do-resultado-dos-editais-nos-12-e-13/[2]):
+** {uri-gustavo}[Gustavo Delgado] ({uri-edital-201513}[edital nr. 13 de 2015]): Desenvolvimento
+** {uri-rafael}[Rafael Coutinho] ({uri-edital-201512}[edital nr. 12 de 2015]): Desenvolvimento
+** {uri-theoziran}[Theoziran Lima] ({uri-edital-201505}[edital nr. 5 de 2015]): Desenvolvimento
+* Contribuições livres:
+** {uri-paulo}[Paulo Jerônimo]
 
-| {uri-aman}[Aman Rathie]
-| Requisitos
-
-Programação
-
-| {uri-christiano}[Christiano Lins]
-| Coordenação
-
-Requisitos
-
-| {uri-guilherme}[Guilherme Hott]
-| Requisitos
-
-Programação
-
-| {uri-paulo}[Paulo Jerônimo]
-| Infraestrutura
-
-Arquitetura da aplicação
-
-Programação
-
-| {uri-raphael}[Raphael Santos]
-| Requisitos
-
-Programação
-
-| {uri-thiago}[Thiago Lopes]
-| Requisitos
-
-Arquitetura da informação
-
-|===
-
-Página no GitHub: https://github.com/orgs/pensandoodireito/people
-
-== Equipe de apoio
-
-* {uri-marco}[Marco Amarelo]
-* {uri-eduardo}[Eduardo Paiva]
-* Guilherme Moraes
-
-== link:../contribua/[Faça parte]
+== Fase 1 (de Ago/2014 a Ago/2015)
+* Servidores do MJ:
+** {uri-marco}[Marco Amarelo]: Coordenação
+* Consultores contratados pelo PNUD (conforme http://pensando.mj.gov.br/2014/07/25/projeto-pensando-o-direito-contrata-5-consultores-de-ti/[estes editais]):
+** {uri-christiano}[Christiano Lins]: Coordenação, Requisitos
+** {uri-paulo}[Paulo Jerônimo] ({uri-edital-201411}[edital nr. 11 de 2014]): Requisitos, Arquitetura, Programação, Infraestrutura
+** {uri-aman}[Aman Rathie]: Requisitos, Programação
+** {uri-guilherme}[Guilherme Hott]: Requisitos, Programação
+** {uri-raphael}[Raphael Santos]: Requisitos, Programação
+** {uri-thiago}[Thiago Lopes]: Requisitos, arquitetura da informação, Programação (`frontend`)
+* Apoio:
+** Eduardo Paiva
+** Guilherme Moraes
 
 // vim: set syntax=asciidoc:

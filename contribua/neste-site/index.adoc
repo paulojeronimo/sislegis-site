@@ -1,4 +1,4 @@
-= Como contribuir
+= Contribuindo na construção deste site
 :page-layout: base
 :toc:
 :toc-title!:
@@ -8,16 +8,23 @@ include::links.adoc[]
 
 toc::[]
 
-== Como contribuir na construção deste site
+== Editando este site
 Este site é estático. Isso significa que ele não é gerado dinamicamente por um servidor e é previamente construído com o uso de algumas ferramentas. No caso, essas ferramentas são o {uri-awestruct}[Awestruct] e {uri-asciidoctor}[Asciidoctor]. Elas dependem de um ambiente {uri-ruby}[Ruby] para serem executadas. Após construído, ele é hospedado gratuitamente no http://pages.github.com[GitHub Pages].
-
 
 Esta página explica como você pode montar, rapidamente, um ambiente preparado para editar este site, adicionando, removendo ou alterando conteúdo.
 
-=== Faça um fork do repositório
+=== Fazendo um fork do repositório
 Para contribuir na construção deste site, você deve possuir uma conta no {uri-github}[GitHub]. Em seguida, deve {uri-fork-a-repo}[criar um fork] do {uri-sislegis-site}[repositório sislegis-site] para essa tua conta. Para saber o que estamos priorizando no desenvolvimento, verifique as {uri-sislegis-site-issues}[issues abertas]. É claro que você também pode sugerir mudanças fazendo {uri-sislegis-site}/pulls?q=[pull requests] mesmo para issues ainda não existentes! ;)
 
-=== Baixe uma imagem Docker
+=== Configurando o teu ambiente
+
+==== Utilizando o Fedora
+Se você estive utilizando o Fedora, siga os passos na página link:utilizando-o-fedora/["Utilizando o Fedora para construir este site"].
+
+==== Utilizando o Windows
+TODO
+
+==== Utilizando o Docker
 A forma mais fácil e rápida de você preparar teu ambiente para fazer a construção deste site, é utilizar o {uri-docker}[Docker]. Com ele você buscará uma imagem que contém todas as ferramentas necessárias, já pré-instaladas e prontas para a execução.
 
 Instale o Docker seguindo os https://docs.docker.com/installation/[passos de instalação descritos em sua documentação].
@@ -28,18 +35,18 @@ Após instalar o Docker, crie um contêiner:
 docker run -it -p 4242:4242 paulojeronimo/judcon-2014-brazil /bin/bash
 ----
 
-Em alguns sistemas, como no {uri-fedora}[Fedora], o docker deve ser executado como `root`. Então, se você tiver experimentado um erro na execução do comando acima, tente executá-lo novamente com o seguinte comando: `sudo !!`.
+Em alguns sistemas, como no {uri-fedora}[Fedora], o docker talvez precise ser executado como `root`. Então, se você tiver experimentado um erro na execução do comando acima, tente executá-lo novamente com o seguinte comando: `sudo !!`.
 
 Se desejar saber detalhes sobre como a imagem https://registry.hub.docker.com/u/paulojeronimo/judcon-2014-brazil/[paulojeronimo/judcon-2014-brazil] foi criada, leia o http://paulojeronimo.github.io/JUDCon-2014-Brazil/tutorial.html[tutorial de Docker do Paulo Jerônimo].
 
-=== Configure o contêiner
+==== Configruando o contêiner
 O contêiner que você criou com o comando acima já possui quase tudo o que é necessário. Mas, ainda não tem o código do teu fork deste site e também não tem as configurações do teu usuário no GitHub para fazer commits de tuas alterações. Então, execute o script a seguir que ele fará as configurações necessárias para deixar teu contêiner preparado para construir este site:
 [source,bash]
 ----
 bash <(curl -L http://pensandoodireito.github.io/sislegis-site/configurar-conteiner.sh)
 ----
 
-=== Edite o site e teste-o localmente
+=== Editando o site e testando-o localmente
 Logue-se com o teu usuário (`su - $GHUSER`) e vá para o diretório `sislegis-site`.
 
 Teste a edição local do site criando um arquivo `teste.adoc`:
@@ -63,7 +70,7 @@ git add teste.adoc
 git commit -m 'testando uma contribuição'
 ----
 
-O script link:../configurar-conteiner.sh[configurar-conteiner.sh] já prepara para você o remoto `upstream` apontando para o repositório original sislegis-site. Você pode executar a instrução a seguir para verificar isso:
+O script link:../../configurar-conteiner.sh[configurar-conteiner.sh] já prepara para você o remoto `upstream` apontando para o repositório original sislegis-site. Você pode executar a instrução a seguir para verificar isso:
 [source,bash]
 ----
 git remote -v
@@ -86,8 +93,8 @@ git push
 
 Finalmente, faça um {uri-pull-request}[pull request], através da interface administrativa do GitHub, para que os administradores do projeto avaliem se o teu `commit` é útil e pode ser mesclado ao projeto!
 
-== Como este site é gerado?
+== Publicando o site
 
-Este site é construído colaborativamente pelos seus link:../../equipe/[desenvolvedores]. Sua geração é feita automaticamente, após cada `merge` de um `pull request` no {uri-sislegis-site}[repositório GitHub do projeto], pelo uso da ferramenta de integração contínua {uri-travis-ci}[Travis CI]. Quando o site é gerado através dessa ferramenta o estado de sua construção é apresentado na página {uri-sislegis-site-travis-builds}.
+A publicação deste site é realizada automaticamente, após cada `merge` de um `pull request` no {uri-sislegis-site}[repositório GitHub do projeto], pelo uso da ferramenta de integração contínua {uri-travis-ci}[Travis CI]. Quando o site é publicado através dessa ferramenta o estado de sua construção é apresentado na página {uri-sislegis-site-travis-builds}.
 
 // vim: set syntax=asciidoc:
