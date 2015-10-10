@@ -1,6 +1,7 @@
 title: SISLEGIS
 base_url: ''
 
+# URLs para bibliotecas externas
 jquery_url: http://ajax.googleapis.com/ajax/libs/jquery/1.11.1
 bootstrap_url: http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5
 
@@ -8,6 +9,7 @@ disqus: asciidoctor
 disqus_generate_id: true
 disqus_developer: true
 
+# Por default, a minificação é desabilitada
 css_minifier: disabled
 js_minifier: disabled
 html_minifier: disabled
@@ -50,10 +52,11 @@ wget:
 profiles:
   development:
     deploy: nil
-    minified: .min
-    css_minifier: enabled
-    js_minifier: enabled
-    html_minifier: enabled
+    # Descomente para realizar testes de minificação em ambiente de desenvolvimento:
+    #minified: .min
+    #css_minifier: enabled
+    #js_minifier: enabled
+    #html_minifier: enabled
   production:
     base_url: http://pensandoodireito.github.io/sislegis-site
     ctx_path: /sislegis-site
