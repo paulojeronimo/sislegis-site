@@ -93,6 +93,15 @@ git push
 
 Finalmente, faça um {uri-pull-request}[pull request], através da interface administrativa do GitHub, para que os administradores do projeto avaliem se o teu `commit` é útil e pode ser mesclado ao projeto!
 
+== Utilizando o Guard e o LiveReload
+
+* LiveReload:
+** http://aslakknutsen.github.io/blog/2012/06/16/2940571/
+** http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/
+* Bug na execução do Guard:
+** https://github.com/celluloid/celluloid/issues/619
+** http://garfieldnate.github.io/blog/2015/07/20/hacking-through-an-octopress-update/
+
 == Publicando o site
 
 A publicação deste site é realizada automaticamente, após cada `merge` de um `pull request` no {uri-sislegis-site}[repositório GitHub do projeto], pelo uso da ferramenta de integração contínua {uri-travis-ci}[Travis CI]. Quando o site é publicado através dessa ferramenta o estado de sua construção é apresentado na página {uri-sislegis-site-travis-builds}.

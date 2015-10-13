@@ -1,4 +1,5 @@
 Gemfile*
+Guardfile
 Rakefile
 README.adoc
 links.adoc
