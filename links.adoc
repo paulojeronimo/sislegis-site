@@ -1,6 +1,7 @@
 // URIs diversas
 :uri-asciidoctor: http://asciidoctor.org
 :uri-awestruct: http://awestruct.org
+:uri-rvm: http://rvm.io
 :uri-ruby: http://ruby-lang.org
 :uri-vagrant: https://www.vagrantup.com
 :uri-docker: http://www.docker.com

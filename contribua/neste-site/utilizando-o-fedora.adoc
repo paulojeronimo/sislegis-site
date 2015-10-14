@@ -12,19 +12,27 @@ toc::[]
 
 === Instalando o Ruby via rvm
 
+Instale o {uri-rvm}[RVM] e o Ruby 2.2.1 com os seguintes comandos:
+
 [source,bash]
 ----
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.1
+curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.1 --auto-dotfiles
 source ~/.profile
 ----
 
+[NOTE]
+====
+Se estiver tendo problemas na execução do comando `gpg`, da forma realizada acima, leia https://github.com/paulojeronimo/dicas-linux/blob/master/instalacao-asciidoctor.asciidoc#1-instalando-o-rvm[esta dica].
+====
+
 === Gerando o site localmente
+
+Clone o repositório deste projeto e gere o site localmente através dos seguintes comandos:
 
 [source,bash]
 ----
-sudo dnf -y install libxml2-devel libxslt-devel
-git clone https://github.com/<SEU_USUARIO>/sislegis-site
+git clone https://github.com/pensandoodireito/sislegis-site
 cd sislegis-site
 rvm use 2.2.1@sislegis-site --create --ruby-version
 gem install bundle
@@ -34,5 +42,16 @@ rake
 
 === Acessando o site gerado
 Acesse o site gerado em http://localhost:4242.
+
+=== Removendo o Ruby e o RVM
+
+Se você desejar remover o Ruby e o RVM no futuro, execute:
+[source,bash]
+----
+rvm implode
+rm -rf ~/.gem
+----
+
+Verifique alguns dos http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_01.html[arquivos de inicialização do Bash] (`~/.bash_profile`, `~./.bashrc` e `~/.profile`) removendo neles quaisquer referências ao RVM. Se você não estiver utilizando o Zsh você pode remover os arquivos `~/.zlogin`, `~/.zshrc`. Caso contrário, apenas remova neles as referências ao RVM. Faça um logout e refaça o seu login para verificar suas mudanças e a inexistência do Ruby e do RVM.
 
 // vim: set syntax=asciidoc:

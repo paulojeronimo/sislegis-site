@@ -1,0 +1,74 @@
+= Utilizando o Docker para construir este site
+:page-layout: base
+:toc:
+:toc-title!:
+:toc-placement!:
+:numbered:
+include::links.adoc[]
+
+toc::[]
+
+== No Fedora 22
+
+=== Alternativa 1: construindo e executando um contêiner (através de um Dockerfile)
+
+[source,bash]
+----
+docker build -t sislegis/site .
+docker run -i -t -p 4242:4242 -v `pwd | xargs dirname`:/home/dev/sislegis-site sislegis/site
+----
+
+=== Alternativa 2: construindo e executando um contêiner (na mão)
+
+Objetivo: compreender os passos inseridos no Dockerfile utilizado pela alternativa 1
+
+==== Executando um contêiner do Fedora 22
+
+[source,bash]
+----
+docker run -i -t -p 4242:4242 fedora:22 /bin/bash
+----
+
+==== Instalando o Awestruct
+
+[source,bash]
+----
+dnf -y install net-tools lsof screen gcc-c++ make ruby-devel findutils git ruby wget
+groupadd -r dev && useradd -g dev -u 1000 dev
+su - dev
+echo -e "export LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8" >> ~/.bashrc
+source ~/.bashrc
+gem install -N bundle rake
+git clone https://github.com/paulojeronimo/sislegis-site
+cd sislegis-site/
+bundle install
+cp ~/.gem/ruby/gems/oga-0.3.4/ext/c/liboga.so ~/.gem/ruby/gems/oga-0.3.4/lib
+----
+
+=== Gerando o site localmente
+
+[source,bash]
+----
+rake
+----
+
+=== Acessando o site gerado
+Acesse o site gerado em http://localhost:4242.
+
+== No Windows
+
+TODO
+
+== No OS X
+
+TODO
+
+== Problemas e soluções
+
+* https://github.com/awestruct/awestruct/issues/486[Awestruct 0.5.6 looking for nonexistent libfile]
+** Atitude tomada nos procedimentos descritos: inserção do `workaround` que faz a cópia da `liboga.so` para o local correto.
+* https://github.com/docker/docker/issues/2174[Port redirecting binding to IPv6 but not IPv4 interfaces.]
+** Atitude que você pode tomar: http://www.server-world.info/en/note?os=Fedora_22&p=initial_conf&f=3[desabilitar o suporte a ipv6].
+* https://github.com/docker/docker/pull/15312/files[Fedora 22 manual network configuration and ip forwarding]
+
+// vim: set syntax=asciidoc:
